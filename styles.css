@@ -1,0 +1,370 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #0caa3c;
+    color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #ff5733;
+}
+
+.home {
+    position: relative;
+    background-image: url('images/home-page.jpg'); /* Background image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+ 
+  
+  .home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .home p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .home .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .home .btn:hover {
+    background-color: #005bb5;
+  }
+  
+
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* About Section Styles */
+#about {
+    background-color: #f4f4f4;
+    padding: 40px;
+}
+.highlight {
+    color: #5a1ac8; 
+  }
+  
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Image Styling (Now on the right side) */
+.about-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover; /* Keeps the aspect ratio while filling the area */
+}
+
+/* Text Styling */
+.about-text {
+    max-width: 500px;
+   
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack the image and text on small screens */
+        align-items: center;
+    }
+
+    .about-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-text h2 {
+        font-size: 1.8rem;
+        text-align: right;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        text-align: right;
+    }
+}
+
+
+/* Sections */
+.about, .services, .contact {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.skills {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .skills h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .skill-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .skill {
+    width: 100px;
+    text-align: center;
+  }
+  
+  .skill i {
+    font-size: 50px; /* Set the icon size */
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .skill p {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .skill img {
+    width: 50px; /* Set image size */
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  .skill i {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #333;  /* Default color */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.skill i:hover {
+  color: #0073e6; /* Hover color */
+}
+
+.skill p {
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.skill p:hover {
+  color: #0073e6; /* Hover color for text */
+}
+
+
+
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 120px;
+}
+button.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #e60000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+
+.download-cv {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .download-cv h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background-color: #f55200;
+  }
+
+  /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-item h3 {
+    font-size: 1.8rem;
+    margin: 15px 0;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.project-item a {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project-item a:hover {
+    background-color: #0056b3;
+}
+
+  
