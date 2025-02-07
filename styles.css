@@ -366,5 +366,40 @@ body {
 .project-item a:hover {
     background-color: #0056b3;
 }
+/* Social Media Icons - Hero Section */
+.social-links {
+  margin-top: 20px;  /* Space above icons */
+  margin-bottom: 30px; /* Adds space below the icons */
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: white;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #00aced;
+}
+
+/* Footer Social Media Icons */
+.footer-social-links {
+  margin-top: 15px;  /* Adds space above */
+  margin-bottom: 20px; /* Adds space below */
+}
+
+.footer-social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 20px;
+  color: white;
+  transition: 0.3s;
+}
+
+.footer-social-links a:hover {
+  color: #00aced;
+}
 
   
