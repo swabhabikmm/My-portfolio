@@ -17,19 +17,28 @@ document.addEventListener("DOMContentLoaded", function () {
    document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Collect form data
     let formData = new FormData(this);
 
-    // Send data to PHP script
-    fetch("send_email.php", {
+    fetch(this.action, {
         method: "POST",
         body: formData,
+        headers: { "Accept": "application/json" },
     })
-    .then(response => response.text())
+    .then(response => response.json())
     .then(data => {
-        alert(data);  // Show response message
-        this.reset();
+        if (data.ok) {
+            document.getElementById("success-message").innerText = "Message sent successfully!";
+            document.getElementById("success-message").style.color = "green";
+            this.reset(); // Reset form fields
+        } else {
+            document.getElementById("success-message").innerText = "Failed to send message. Try again.";
+            document.getElementById("success-message").style.color = "red";
+        }
     })
-    .catch(error => console.error("Error:", error));
+    .catch(error => {
+        document.getElementById("success-message").innerText = "An error occurred. Please try again.";
+        document.getElementById("success-message").style.color = "red";
+    });
 });
+
 
