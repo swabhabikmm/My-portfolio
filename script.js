@@ -14,23 +14,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Contact form submission
-    document.getElementById("contact-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        alert("Message sent successfully!");
+   document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Collect form data
+    let formData = new FormData(this);
+
+    // Send data to PHP script
+    fetch("send_email.php", {
+        method: "POST",
+        body: formData,
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);  // Show response message
         this.reset();
-    });
+    })
+    .catch(error => console.error("Error:", error));
 });
 
-const skills = document.querySelectorAll('.skill');
-
-skills.forEach(skill => {
-  skill.addEventListener('mouseenter', () => {
-    skill.querySelector('i').style.color = '#0073e6';
-    skill.querySelector('p').style.color = '#0073e6';
-  });
-  skill.addEventListener('mouseleave', () => {
-    skill.querySelector('i').style.color = '#333';
-    skill.querySelector('p').style.color = '#333';
-  });
-});
